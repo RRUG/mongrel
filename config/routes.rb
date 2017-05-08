@@ -1,5 +1,9 @@
-Rails.application.routes.draw do
-  root 'home#index'
+require_relative '../lib/constraints/subdomain_constraint'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+Rails.application.routes.draw do
+  constraints SubdomainConstraint do
+    # Place anything related to one tenant/shelter
+  end
+
+  root 'home#index'
 end
