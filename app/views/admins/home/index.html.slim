@@ -1,0 +1,5 @@
+h1 Here is an admin area for Mongrel app
+p Available shelters:
+ul
+  - @shelters.each do |shelter|
+    li #{shelter.name} - (host: #{shelter.subdomain})

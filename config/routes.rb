@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     root 'shelters/home#index'
   end
 
+  namespace :admins, path: "admin" do
+    root 'home#index'
+  end
+
   root 'home#index'
 end
