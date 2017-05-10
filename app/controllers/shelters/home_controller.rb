@@ -1,7 +1,6 @@
 module Shelters
-  class HomeController < ApplicationController
+  class HomeController < BaseController
     def index
-      @shelter = Shelter.find_by(subdomain: Apartment::Tenant.current)
     end
   end
 end

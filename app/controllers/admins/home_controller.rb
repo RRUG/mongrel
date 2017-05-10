@@ -1,5 +1,5 @@
 module Admins
-  class HomeController < ApplicationController
+  class HomeController < BaseController
     def index
       @shelters = Shelter.all
     end
